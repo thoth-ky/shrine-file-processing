@@ -1,3 +1,5 @@
 class Book < ApplicationRecord
-  include ImageUploader[:image]
+  include Uploaders::ImageUploader[:image]
+
+  validates :title, presence: true 
 end
